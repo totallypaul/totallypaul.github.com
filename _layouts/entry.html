@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h2 class="content">{{page.title}}</h2>
+<table>
+  <tr>
+    <td><img src="{{page.image}}"
+        {% if page.cat == "pix" %} width="120" heigth="180"
+        {% elsif page.cat == "music" %} width="120" heigth="120"
+        {% else %} width="60" height="120" {%endif%}/>
+    </td></tr>
+  <tr><td>&nbsp;</td><td>{{content}}</td>
+  </tr>
+</table>
+{% if page.cat == "music" %} <a href="http://totallypaul.com/?page_id=71">Buy Now!</a>{%endif%}<br/>
+{%if page.source%} <a href="{{page.source}}">Original Source</a>{%endif%}

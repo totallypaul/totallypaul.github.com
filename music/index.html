@@ -1,0 +1,17 @@
+---
+layout: default
+title: Music 
+---
+<section class="content">
+  <h2>Check Out Music o' Paul</h2>
+</section>
+
+<ul class="entries">
+  {% for post in site.categories.music %}
+  <li>
+    <h3>{{ post.title }}</h3>
+     <a href="{{ post.url }}"><img src="{{ post.image }}" width="90" height="180"/></a>
+     {{ post.comment }}
+  </li>
+  {% endfor %}
+</ul>

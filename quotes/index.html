@@ -1,0 +1,17 @@
+---
+layout: default
+title: Quotes
+---
+<section class="content">
+  <h2>Check Out Quotes o' Paul</h2>
+</section>
+
+<ul class="entries">
+  {% for post in site.categories.quotes %}
+  <li>
+    <h3>{{ post.title }}</h3>
+     {{ post.comment }}<br/>
+     <a href="{{ post.url }}">read more</a>
+  </li>
+  {% endfor %}
+</ul>
